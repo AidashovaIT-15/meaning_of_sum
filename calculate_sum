@@ -1,28 +1,24 @@
 #include <iostream>
-#include<cmath>
-#include "caiculate_sum.h"
+#include <cmath> 
+#include "Header.h"
 using namespace std;
-int main() 
+int main()
 {
     setlocale(LC_ALL, "Russian");
     int n;
     cout << "Введите значение n: ";
-    while (true)
+    cin >> n;
+    if (!correct(n))//условие,если некорректно 
     {
-        cin >> n;
-        if (cin.fail() || n < 10) 
-        {
-            cin.ignore(10000000000000000000, '\n');//игнорировать некорректный ввод
-            cout << "Ошибка: n должно быть больше или равно 10! " << endl;
-            cout << "Введите значение n: ";
-        }
-        else 
-        {
-            break;//ввод корректен, выход из цикла
-        }
+        cout << "Ошибка: n - больше или равно 10." << endl;
+        return 1; 
     }
-    int r = Sum(n);//переменная для результата итоговой суммы
-    cout << "Сумма 1^" << n << " + 2^" << n << " + ... + " << n << "^" << n << " = " << r << endl;
+    unsigned long long s = 0;//инициализируем переменную суммы,избегаем переполнение
+    for (int i = 1; i <= n; ++i)
+    {
+        s += static_cast<unsigned long long>(pow(i, n)); 
+    }
+    cout << "Сумма 1^" << n << " + 2^" << n << " + ... + " << n << "^" << n << " = " << sum << endl;
     cout << "Программа завершена, нажмите пробел. ";
     return 0;
 }
