@@ -1,1 +1,1 @@
-bool correct(int n);
+bool correct(int n);//функция для проверки на корректность ввода
