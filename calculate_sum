@@ -18,7 +18,7 @@ int main()
     {
         s += static_cast<unsigned long long>(pow(i, n)); 
     }
-    cout << "Сумма 1^" << n << " + 2^" << n << " + ... + " << n << "^" << n << " = " << sum << endl;
+    cout << "Сумма 1^" << n << " + 2^" << n << " + ... + " << n << "^" << n << " = " << s << endl;
     cout << "Программа завершена, нажмите пробел. ";
     return 0;
 }
