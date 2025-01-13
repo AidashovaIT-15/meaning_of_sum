@@ -14,7 +14,7 @@ int main()
         return 1; 
     }
     unsigned long long s = 0;//инициализируем переменную суммы,избегаем переполнение
-    for (int i = 1; i <= n; ++i)
+    for (int i = 1; i <= n; ++i)//перебор чисел от 1 до n
     {
         s += static_cast<unsigned long long>(pow(i, n)); 
     }
