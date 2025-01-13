@@ -1,1 +1,1 @@
-int Sum(int n);
+bool correct(int n);
